@@ -1,8 +1,10 @@
 import { useState, useEffect, use } from "react";
 import { NavLink, useLocation } from "react-router-dom";
+import { LuMoon, LuSun } from "react-icons/lu";
 
-export default function Navbar() {
+export default function Navbar(props) {
   const [isOpen, setIsOpen] = useState(false);
+  const [theme, setTheme] = useState(true);
   const location = useLocation();
 
   useEffect(() => {
@@ -17,8 +19,13 @@ export default function Navbar() {
     { "/contact": "CONTACT" },
   ];
 
+  const handleToggle = () => {
+    setTheme(!theme);
+    props.onToggle();
+  };
+
   return (
-    <nav className="sticky top-0 z-50 bg-neutral-100/20">
+    <nav className="sticky top-0 z-50 border-b border-zinc-50/5  bg-zinc-500/2 backdrop-blur-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center items-center h-16">
         {/* Desktop Menu (centered) */}
         <div className="hidden md:flex space-x-8 text-xl">
@@ -27,6 +34,12 @@ export default function Navbar() {
           <NavLink to="/projects">PROJECTS</NavLink>
           <NavLink to="/contact">CONTACT</NavLink>
         </div>
+        <button
+          className="absolute right-6 lg:right-15 text-2xl cursor-pointer"
+          onClick={handleToggle}
+        >
+          {theme ? <LuMoon /> : <LuSun />}
+        </button>
 
         {/* Mobile Menu Button (absolute right) */}
         <div className="w-full p-2 md:hidden text-right ">

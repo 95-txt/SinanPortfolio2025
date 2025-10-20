@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import pic1 from "/assets/images/pic1.JPG";
 import CountUp, { useCountUp } from "react-countup";
 import HomeProjects from "../components/HomeProjects";
-import Footer from "../components/Footer";
 import HomeBrands from "../components/HomeBrands";
 import Line from "../components/Line";
 
@@ -11,10 +10,10 @@ export default function Home() {
   const [start, setStart] = useState(false);
   return (
     <>
-      <div className="h-140 sm:h-210 flex flex-col justify-between">
+      <div className="h-140 sm:h-210 flex flex-col justify-between dark:bg-zinc-900">
         <motion.div
           initial={{ opacity: 0, x: -100 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
           viewport={{ once: true }}
           className="px-8 md:px-12 text-left text-3xl md:text-6xl"
@@ -26,10 +25,10 @@ export default function Home() {
           <div className="-mb-2 overflow-hidden">
             <motion.div
               initial={{ opacity: 0, y: "100%" }}
-              whileInView={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, ease: "easeOut", delay: 0.6 }}
               viewport={{ once: true }}
-              className="sm:inline tracking-widest text-3xl md:text-8xl"
+              className="sm:inline tracking-widest text-3xl md:text-5xl lg:text-8xl"
             >
               MUHAMMED{" "}
             </motion.div>
@@ -37,7 +36,7 @@ export default function Home() {
           <div className="overflow-hidden">
             <motion.div
               initial={{ opacity: 0, y: "100%" }}
-              whileInView={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }}
               viewport={{ once: true }}
               className="h-fit inline-block text-[28vw] md:text-[14vw] leading-none"
@@ -47,25 +46,35 @@ export default function Home() {
           </div>
           <motion.div
             initial={{ clipPath: "inset(0 100% 0 0)" }}
-            whileInView={{ clipPath: "inset(0 0 0 0)" }}
+            animate={{ clipPath: "inset(0 0 0 0)" }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 1 }}
             viewport={{ once: true }}
-            className="text-sm md:text-2xl italic text-gray-700"
+            className="text-sm md:text-2xl italic text-zinc-500"
           >
             Creative Developer &amp; Designer
           </motion.div>
-          <motion.button
-            initial={{ opacity: 0, y: "100%" }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 1 }}
-            viewport={{ once: true }}
-            className="mt-8 text-sm md:text-lg border p-2 px-4 rounded-3xl hover:bg-neutral-900 hover:text-neutral-100 transition-colors duration-300"
-          >
-            Contact
-          </motion.button>
+          <div className="mt-8 text-sm md:text-lg">
+            <motion.button
+              initial={{ opacity: 0, y: "100%" }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 1 }}
+              viewport={{ once: true }}
+              className="mr-2 border p-2 px-4 rounded-3xl hover:bg-zinc-900 hover:text-zinc-100 dark:hover:bg-zinc-100 dark:hover:text-zinc-900 transition-colors duration-300"
+            >
+              Resume ↓
+            </motion.button>
+            <motion.button
+              initial={{ opacity: 0, y: "100%" }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 1.2 }}
+              viewport={{ once: true }}
+              className="ml-2 border p-2 px-4 rounded-3xl hover:bg-zinc-900 hover:text-zinc-100 dark:hover:bg-zinc-100 dark:hover:text-zinc-900 transition-colors duration-300"
+            >
+              Contact
+            </motion.button>
+          </div>
         </div>
       </div>
-
       <Line />
 
       <div className="w-full md:h-svh grid grid-cols-1 md:grid-cols-2">
@@ -75,7 +84,7 @@ export default function Home() {
           viewport={{ once: true }}
           className="relative order-2 md:order-1 z-0"
         >
-          <p className="absolute -left-5 -bottom-40 md:-bottom-50 md:-left-30 text-[72vw] md:text-[40vw] text-gray-200 ">
+          <p className="absolute -left-5 -bottom-40 md:-bottom-50 md:-left-30 text-[72vw] md:text-[40vw] opacity-5">
             {start ? <CountUp end={95} duration={5} /> : 0}
           </p>
         </motion.div>
@@ -98,7 +107,7 @@ export default function Home() {
             whileInView={{ clipPath: "inset( 0 0 0 0 )" }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="text-justify text-sm md:text-xl leading-relaxed text-gray-800"
+            className="text-justify text-sm md:text-xl leading-relaxed"
           >
             Computer Science graduate who loves bringing ideas to life through
             both code and design. I enjoy creating digital experiences that are
@@ -128,7 +137,6 @@ export default function Home() {
       <HomeProjects />
       <Line />
       <HomeBrands />
-      <Footer />
     </>
   );
 }

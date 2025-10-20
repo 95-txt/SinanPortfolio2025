@@ -10,6 +10,16 @@
       "des": "The official IEEE Student Branch promoting technical excellence, research, and professional development."
     },
     {
+      "name": "HESTIA'22,23,24",
+      "pos": "National Techno Cultural Festival",
+      "des": "TKMCE’s premier national techno-cultural fest blending innovation, creativity, and entertainment."
+    },
+    {
+      "name": "Coading Club",
+      "pos": "Design",
+      "des": "Club for programmers to improve problem-solving skills and collaborate on coding challenges and hackathons."
+    },
+    {
       "name": "IEI CSE TKMCE",
       "pos": "Web Design",
       "des": "A branch of the Institution of Engineers (India) focusing on advancing computing knowledge and industry interaction."
@@ -18,16 +28,6 @@
       "name": "L&D Club TKMCE",
       "pos": "Design",
       "des": "Literary and Debate club focused on fostering literary skills, critical thinking, and public speaking abilities among students."
-    },
-    {
-      "name": "Coading Club",
-      "pos": "Design",
-      "des": "Club for programmers to improve problem-solving skills and collaborate on coding challenges and hackathons."
-    },
-    {
-      "name": "HESTIA'22,23,24",
-      "pos": "National Techno Cultural Festival",
-      "des": "TKMCE’s premier national techno-cultural fest blending innovation, creativity, and entertainment."
     },
     {
       "name": "TKM Film Fest",

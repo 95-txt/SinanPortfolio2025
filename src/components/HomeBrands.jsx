@@ -55,7 +55,7 @@ function HomeBrands() {
   ];
   return (
     <>
-      <div className="sm:px-8 md:px-50">
+      <div id="brands" className="sm:px-8 md:px-50">
         <motion.div
           className="text-5xl md:text-[6rem] pb-15 pl-8 md:pl-0"
           initial={{ opacity: 0, x: -100 }}
@@ -76,7 +76,7 @@ function HomeBrands() {
               viewport={{ once: true }}
             >
               <img
-                className="hover:drop-shadow-lg hover:scale-105 duration-300"
+                className="hover:scale-110 duration-300"
                 src={brand}
                 alt=""
               />
@@ -97,7 +97,7 @@ function HomeBrands() {
         >
           Tools
         </motion.div>
-        <div className="grid grid-cols-4 md:grid-cols-5 items-center text-gray-400 mb-20 px-12 md:px-0">
+        <div className="grid grid-cols-4 md:grid-cols-5 items-center text-zinc-500 mb-20 px-12 md:px-0">
           {tools.map((Icon, i) => {
             return (
               <motion.div

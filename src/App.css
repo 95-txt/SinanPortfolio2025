@@ -1,14 +1,11 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Space Mono", monospace;
-  background: #f3f4f6;
-}
-
-@keyframes slideLeft {
-  from {
-    transform: translateX(0%);
-  }
-  to {
-    transform: translateX(-120%);
-  }
 }
