@@ -1,0 +1,22 @@
+[
+  { 
+    "id": 1, 
+  "name": "SNN-Based Approach for Social Media Threat Detection Using NLP ",
+  "tools":"Python, PyTorch, snnTorch, NLP",
+  "description": "Designed and implemented a spiking neural network to detect cyber threats from tweets by combining NLP, structural, and URL features.\nEnhanced robustness with adaptive training and achieved energy-efficient, accurate intrusion detection." },
+  { 
+    "id": 2, 
+    "name": "Plant Disease Detection & Solution Recommendation",
+    "tools":"Python, PyTorch, Flutter, Bootstrap",
+    "description": "Developed a Software Solution to Find Plant Disease from image and get treatment and improvement solutions." },
+  { 
+    "id": 3, 
+    "name": "Movie Filtering & ManagementL",
+    "tools":"Python, HTML, CSS, MySQL",
+    "description": "Built a Web Solution to organize, filter movies, and get recommendations according to users wish." },
+  { 
+    "id": 4, 
+    "name": "MediFix",
+    "tools":"Figma, Flutter",
+    "description": "Built a Software Solution to Medical Service Access Like Consulting, Medicine Supply, Ambulance Service." }
+]
