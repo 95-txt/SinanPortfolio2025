@@ -5,12 +5,15 @@ import CountUp, { useCountUp } from "react-countup";
 import HomeProjects from "../components/HomeProjects";
 import HomeBrands from "../components/HomeBrands";
 import Line from "../components/Line";
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
   const [start, setStart] = useState(false);
+  const navigate = useNavigate();
+
   return (
     <>
-      <div className="h-140 sm:h-210 flex flex-col justify-between dark:bg-zinc-900">
+      <div className="h-140 sm:h-210 flex flex-col justify-between">
         <motion.div
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
@@ -21,7 +24,7 @@ export default function Home() {
           Hi, I’m
         </motion.div>
 
-        <div className="text-center">
+        <div className="text-center lg:mb-20">
           <div className="-mb-2 overflow-hidden">
             <motion.div
               initial={{ opacity: 0, y: "100%" }}
@@ -55,6 +58,9 @@ export default function Home() {
           </motion.div>
           <div className="mt-8 text-sm md:text-lg">
             <motion.button
+              onClick={() =>
+                window.open("/Muhammed_Sinan_Resume.pdf", "_blank")
+              }
               initial={{ opacity: 0, y: "100%" }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 1 }}
@@ -64,6 +70,7 @@ export default function Home() {
               Resume ↓
             </motion.button>
             <motion.button
+              onClick={() => navigate("/contact")}
               initial={{ opacity: 0, y: "100%" }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 1.2 }}

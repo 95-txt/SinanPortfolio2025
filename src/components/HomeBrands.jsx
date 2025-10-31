@@ -65,7 +65,7 @@ function HomeBrands() {
         >
           Brands
         </motion.div>
-        <div className="pb-20 grid grid-cols-3 px-12 md:px-0 gap-8 md:gap-0 sm:grid-cols-4 lg:grid-cols-5 items-center">
+        <div className="dark:bg-zinc-50/95 rounded-2xl mb-30 grid grid-cols-3 px-12 md:px-0 gap-8 md:gap-0 sm:grid-cols-4 lg:grid-cols-5 items-center">
           {brands.map((brand, i) => (
             <motion.div
               className="md:px-20 md:py-15"
