@@ -19,7 +19,15 @@ function Designfolio() {
   const icebae = [];
   const fr = [];
   const sp = [];
+  const tn = [];
 
+  for (let i = 1; i <= 18; i++) {
+    tn.push(
+      <PhotoView key={i} src={`/assets/images/thumbnails/tn${i}.jpg`}>
+        <img src={`/assets/images/thumbnails/tn${i}.jpg`} />
+      </PhotoView>
+    );
+  }
   for (let i = 1; i <= 6; i++) {
     frkln.push(
       <PhotoView key={i} src={`/assets/images/frklnbrsr/br${i}.jpg`}>
@@ -85,6 +93,7 @@ function Designfolio() {
             </div>
           ))}
         </PhotoProvider>
+        <Carousel name={"Youtube Thumbnails"}>{tn}</Carousel>
         <Carousel name={"Hestia'25 Brochure"}>{h25}</Carousel>
         <Carousel name={"Hestia'24 Pre Event Brochure"}>{h24}</Carousel>
         <Carousel name={"IKIGAI Brochure"}>{iki24}</Carousel>
