@@ -13,7 +13,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="h-140 sm:h-210 flex flex-col justify-between">
+      <div className="h-[85vh] md:h-[90vh] lg:h-[95vh] flex flex-col justify-between">
         <motion.div
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}

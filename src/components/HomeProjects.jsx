@@ -66,8 +66,10 @@ function HomeProjects() {
                 viewport={{ once: true }}
               >
                 <div className="p-4 lg:px-10 hover:translate-x-2 hover:bg-zinc-500/10 duration-300">
-                  <p className="text-xl md:text-2xl">{project.name}</p>
-                  <p className="text-xs md:text-base">{project.tools}</p>
+                  <p className="text-lg md:text-2xl">{project.name}</p>
+                  <p className="text-xs md:text-base text-zinc-500">
+                    {project.tools}
+                  </p>
                 </div>
               </motion.li>
             ))}
@@ -101,7 +103,7 @@ function HomeProjects() {
           </motion.p>
         </div>
 
-        <div className="mt-15 pb-20">
+        <div className="md:mt-15 pb-20">
           {works.map((work, i) => (
             <div key={i}>
               <div className="grid grid-flow-col gap-3 md:gap-4">

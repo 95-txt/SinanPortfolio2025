@@ -20,6 +20,7 @@ export default function Navbar(props) {
   ];
 
   const handleToggle = () => {
+    // setIsOpen(!isOpen);
     setTheme(!theme);
     props.onToggle();
   };
