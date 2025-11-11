@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sinanportfolio2025.onrender.com/sitemap.xml
