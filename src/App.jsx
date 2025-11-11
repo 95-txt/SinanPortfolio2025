@@ -1,5 +1,5 @@
 import "./App.css";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import About from "./pages/About";
@@ -9,6 +9,11 @@ import ScrollToTop from "./components/ScrollToTop";
 import Footer from "./components/Footer";
 import { useState } from "react";
 import ParticlesBackground from "./components/ParticlesBackground";
+import Devfolio from "./components/Devfolio";
+import Designfolio from "./components/Designfolio";
+import Logofolio from "./components/Logofolio";
+import Uiuxfolio from "./components/Uiuxfolio";
+import Artfolio from "./components/Artfolio";
 
 function App() {
   const [theme, setTheme] = useState(false);
@@ -28,7 +33,14 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/About" element={<About />} />
-        <Route path="/Projects" element={<Projects />} />
+        <Route path="/projects" element={<Projects />}>
+          <Route index element={<Navigate to="dev" replace />} />
+          <Route path="dev" element={<Devfolio />} />
+          <Route path="design" element={<Designfolio />} />
+          <Route path="logo" element={<Logofolio />} />
+          <Route path="uiux" element={<Uiuxfolio />} />
+          <Route path="art" element={<Artfolio />} />
+        </Route>
         <Route path="/Contact" element={<Contact />} />
       </Routes>
       <Footer />

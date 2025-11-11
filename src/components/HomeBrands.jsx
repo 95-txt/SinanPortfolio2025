@@ -55,9 +55,9 @@ function HomeBrands() {
   ];
   return (
     <>
-      <div id="brands" className="sm:px-8 md:px-50">
+      <div id="brands" className="px-8 md:px-20 lg:px-50">
         <motion.div
-          className="text-5xl md:text-[6rem] pb-15 pl-8 md:pl-0"
+          className="text-5xl md:text-[6rem] mb-10"
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.8 }}
@@ -65,10 +65,10 @@ function HomeBrands() {
         >
           Brands
         </motion.div>
-        <div className="dark:bg-zinc-50/95 rounded-2xl mb-30 grid grid-cols-3 m-6 md:m-0 p-10 gap-8 md:gap-0 sm:grid-cols-4 lg:grid-cols-5 items-center">
+        <div className="dark:bg-zinc-50/95 rounded-2xl mb-30 items-center grid grid-cols-3 xl:grid-cols-5 gap-8 p-8 md:gap-20 xl:gap-x-30 md:p-20">
           {brands.map((brand, i) => (
             <motion.div
-              className="md:px-20 md:py-15"
+              // className="md:px-20 md:py-15"
               key={i}
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}

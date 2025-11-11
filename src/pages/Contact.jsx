@@ -40,7 +40,7 @@ function Contact() {
 
         <button
           type="submit"
-          className="bg-zinc-900 text-zinc-100 dark:bg-zinc-100 dark:text-zinc-900 p-2 rounded-md"
+          className="bg-zinc-900 text-zinc-100 dark:bg-zinc-100 dark:text-zinc-900 p-2 rounded-md cursor-pointer hover:opacity-90"
         >
           Send
         </button>

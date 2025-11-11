@@ -6,6 +6,7 @@ import HomeProjects from "../components/HomeProjects";
 import HomeBrands from "../components/HomeBrands";
 import Line from "../components/Line";
 import { useNavigate } from "react-router-dom";
+import GridButton from "../components/GridButton";
 
 export default function Home() {
   const [start, setStart] = useState(false);
@@ -54,31 +55,27 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-sm md:text-2xl italic text-zinc-500"
           >
-            Creative Developer &amp; Designer
+            Developer &amp; Designer
           </motion.div>
-          <div className="mt-8 text-sm md:text-lg">
-            <motion.button
-              onClick={() =>
+          <div className="w-full grid grid-cols-2 md:grid-cols-4 my-10 border-y-2 border-zinc-500">
+            <GridButton
+              text="Designs"
+              handleClick={() => navigate("/projects/design")}
+            />
+            <GridButton
+              text="Projects"
+              handleClick={() => navigate("/projects")}
+            />
+            <GridButton
+              text="Resume ↓"
+              handleClick={() =>
                 window.open("/Muhammed_Sinan_Resume.pdf", "_blank")
               }
-              initial={{ opacity: 0, y: "100%" }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 1 }}
-              viewport={{ once: true }}
-              className="mr-2 border p-2 px-4 rounded-3xl hover:bg-zinc-900 hover:text-zinc-100 dark:hover:bg-zinc-100 dark:hover:text-zinc-900 transition-colors duration-300"
-            >
-              Resume ↓
-            </motion.button>
-            <motion.button
-              onClick={() => navigate("/contact")}
-              initial={{ opacity: 0, y: "100%" }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 1.2 }}
-              viewport={{ once: true }}
-              className="ml-2 border p-2 px-4 rounded-3xl hover:bg-zinc-900 hover:text-zinc-100 dark:hover:bg-zinc-100 dark:hover:text-zinc-900 transition-colors duration-300"
-            >
-              Contact
-            </motion.button>
+            />
+            <GridButton
+              text="Contact"
+              handleClick={() => navigate("/contact")}
+            />
           </div>
         </div>
       </div>
@@ -116,10 +113,10 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-justify text-sm md:text-xl leading-relaxed"
           >
-            Computer Science graduate who loves bringing ideas to life through
-            both code and design. I enjoy creating digital experiences that are
-            not just functional, but also intuitive and visually engaging,
-            blending my technical skills with a creative touch.
+            Computer Science and engineering graduate who loves bringing ideas
+            to life through both code and design. I enjoy creating digital
+            experiences that are not just functional, but also visually
+            engaging, blending my technical skills with creative touch.
           </motion.p>
 
           {/* Row 3 - Link */}

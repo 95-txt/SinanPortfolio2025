@@ -1,6 +1,7 @@
 import { useState, useEffect, use } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { LuMoon, LuSun } from "react-icons/lu";
+import ScrollToTop from "./ScrollToTop";
 
 export default function Navbar(props) {
   const [isOpen, setIsOpen] = useState(false);
