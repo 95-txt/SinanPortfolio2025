@@ -81,20 +81,9 @@ export default function Home() {
       </div>
       <Line />
 
-      <div className="w-full md:h-svh grid grid-cols-1 md:grid-cols-2">
-        {/* Left Column - Big Number */}
-        <motion.div
-          onViewportEnter={() => setStart(true)}
-          viewport={{ once: true }}
-          className="relative order-2 md:order-1 z-0"
-        >
-          <p className="absolute -left-5 -bottom-40 md:-bottom-50 md:-left-30 text-[72vw] md:text-[40vw] opacity-5">
-            {start ? <CountUp end={95} duration={5} /> : 0}
-          </p>
-        </motion.div>
-
+      <div className="w-full flex flex-row-reverse justify-between lg:items-end">
         {/* Right Column - 3 Rows */}
-        <div className="order-1 md:order-2 flex flex-col justify-center space-y-8 px-8 pt-8 md:mt-0 md:p-0 md:pr-50 mb-20 md:mb-30">
+        <div className="max-w-7xl flex flex-col space-y-8 px-8 pt-8 md:p-10 lg:px-50 mb-20 md:my-40">
           <motion.img
             initial={{ clipPath: "inset(0% 0% 0% 100%)" }}
             whileInView={{ clipPath: "inset(0% 0% 0% 0%)" }}
@@ -136,6 +125,15 @@ export default function Home() {
             </a>
           </motion.div>
         </div>
+        <motion.div
+          onViewportEnter={() => setStart(true)}
+          viewport={{ once: true }}
+          className="relative z-0"
+        >
+          <p className="absolute -left-20 bottom-0 lg:-bottom-30 leading-none text-[72vw] md:text-[40vw] opacity-5">
+            {start ? <CountUp end={95} duration={5} /> : 0}
+          </p>
+        </motion.div>
       </div>
       <Line />
       <HomeProjects />

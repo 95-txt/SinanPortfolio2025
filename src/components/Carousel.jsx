@@ -7,7 +7,7 @@ function Carousel({ children, name }) {
   const transformStyle = `translateX(-${slide * 100}%)`;
 
   return (
-    <div className="relative my-10 lg:my-30 z-0 max-w-5xl mx-auto">
+    <div className="relative my-10 lg:my-25 z-0 max-w-3xl mx-auto">
       <button
         className="md:hidden absolute -left-8 p-3 rounded-2xl h-[70%]"
         onClick={() =>

@@ -1,73 +1,7 @@
-// import React, { useEffect, useState } from "react";
-// import { motion } from "framer-motion";
-// import { Outlet, useNavigate } from "react-router-dom";
-
-// function Projects() {
-//   const tabs = [
-//     { label: "Devfolio", path: "dev" },
-//     { label: "Design Folio", path: "design" },
-//     { label: "Logofolio", path: "logo" },
-//     { label: "UI/UX Folio", path: "uiux" },
-//     { label: "Artfolio", path: "art" },
-//   ];
-//   const [active, setActive] = useState(0);
-//   const navigate = useNavigate();
-
-//   const goto = (i) => {
-//     setActive(i);
-//     navigate(tabs[i].path);
-//   };
-
-//   return (
-//     <>
-//       <div className="z-10 hidden fixed top-16 w-full md:flex justify-center border-b-2 border-zinc-500/20 bg-zinc-200/20 dark:bg-zinc-900/10 backdrop-blur-xl shadow-lg/5">
-//         {tabs.map((tab, i) => (
-//           <button
-//             key={i}
-//             onClick={() => goto(i)}
-//             className={`relative px-8 py-4 text-sm md:text-base font-medium transition-colors
-//             ${
-//               active === i
-//                 ? ""
-//                 : "text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50"
-//             }`}
-//           >
-//             {tab.label}
-//             {active === i && (
-//               <motion.div
-//                 layoutId="underline"
-//                 className="absolute left-0 w-full -bottom-[2px] h-[2px] bg-zinc-900 dark:bg-zinc-50"
-//               />
-//             )}
-//           </button>
-//         ))}
-//       </div>
-//       <div className="z-10 md:hidden fixed top-16 w-full flex border-b-2 border-zinc-500/20 bg-zinc-500/8 backdrop-blur-xl shadow-lg/5">
-//         {tabs.map((tab, i) => (
-//           <motion.button
-//             key={i}
-//             onClick={() => goto(i)}
-//             className={`relative py-4 text-sm md:text-base font-medium transition-colors border border-b-0 border-zinc-500/20
-//             ${
-//               active === i
-//                 ? "px-8"
-//                 : "flex-1 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50"
-//             } ${i === 0 ? "border-l-0" : ""} ${i === 4 ? "border-r-0" : ""}`}
-//           >
-//             {active === i ? tab.label : tab.label.charAt(0)}
-//           </motion.button>
-//         ))}
-//       </div>
-//       <div className="h-10"></div>
-//       <Outlet />
-//     </>
-//   );
-// }
-
-// export default Projects;
 import React, { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Outlet, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 export default function Projects() {
   const tabs = [
@@ -78,15 +12,21 @@ export default function Projects() {
     { label: "Artfolio", path: "art" },
   ];
 
+  const location = useLocation();
   const [active, setActive] = useState(0);
   const [pos, setPos] = useState({ left: 0, width: 0 });
   const refs = useRef([]);
   const navigate = useNavigate();
 
   const goto = (i) => {
-    setActive(i);
     navigate(tabs[i].path);
   };
+
+  useEffect(() => {
+    setActive(
+      tabs.findIndex((tab) => tab.path === location.pathname.split("/")[2])
+    );
+  }, [location]);
 
   // measure underline position — short + stable
   useEffect(() => {

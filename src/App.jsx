@@ -48,7 +48,7 @@ function App() {
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
-          content="https://sinanportfolio2025.onrender.com/preview.jpg"
+          content="https://sinanportfolio2025.onrender.com/logo.svg"
         />
       </Helmet>
       <div
@@ -56,6 +56,8 @@ function App() {
           theme ? "" : "dark"
         } bg-zinc-100/0 dark:bg-zinc-900/0 text-zinc-900 dark:text-zinc-100`}
       >
+        <div className="hidden dark:block fixed w-full h-25 bottom-0 bg-gradient-to-t from-zinc-900/95 via-zinc-900/40 to-transparent z-30 pointer-events-none"></div>
+
         <ParticlesBackground theme={theme} />
         <Navbar onToggle={handleTheme} />
         <ScrollToTop />

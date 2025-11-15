@@ -31,7 +31,7 @@ function Devfolio() {
 
   return (
     <div className="p-8 md:p-18 lg:px-50 md:text-center">
-      <div className="text-xl md:text-5xl lg:text-6xl font-bold my-6 md:my-20">
+      <div className="text-xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-18">
         EasyPay Payment Wallet
       </div>
 

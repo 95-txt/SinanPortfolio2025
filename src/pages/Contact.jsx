@@ -1,4 +1,5 @@
-import { ArrowDown, MoveDown, MoveDownIcon } from "lucide-react";
+import { motion } from "framer-motion";
+import { ArrowDown, Infinity, Repeat } from "lucide-react";
 import React from "react";
 
 function Contact() {
@@ -47,7 +48,7 @@ function Contact() {
       </form>
       <div className="w-full text-center my-10">
         My socials
-        <ArrowDown className="mx-auto mt-4" />
+        <ArrowDown className="mx-auto mt-4 animate-bounce" />
       </div>
     </>
   );

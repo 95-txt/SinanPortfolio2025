@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 import Carousel from "./Carousel";
 import MouseSlider from "./MouseSlider";
 
 function Designfolio() {
+  const [visiblefirst, setVisiblefirst] = useState(false);
+  const [visiblesecond, setVisiblesecond] = useState(false);
+  const [visiblethird, setVisiblethird] = useState(false);
   const des = [
     "DJ Holy C EDM Night",
     "HESTIA'24 Artist lineup",
@@ -20,6 +23,14 @@ function Designfolio() {
   const fr = [];
   const sp = [];
   const tn = [];
+
+  const carousels = [
+    <Carousel name={"Hestia'25 Brochure"}>{h25}</Carousel>,
+    <Carousel name={"Hestia'24 Pre Event Brochure"}>{h24}</Carousel>,
+    <Carousel name={"IKIGAI Brochure"}>{iki24}</Carousel>,
+    <Carousel name={"Youtube Thumbnails"}>{tn}</Carousel>,
+    <Carousel name={"FRANKLIN'S LECTURES"}>{frkln}</Carousel>,
+  ];
 
   for (let i = 1; i <= 18; i++) {
     tn.push(
@@ -70,11 +81,11 @@ function Designfolio() {
       <div className="p-8 md:p-18 lg:px-50 md:text-center">
         <div className="text-xl md:text-6xl font-bold ">Design Folio</div>
         <div className="text-sm md:text-xl mt-2 mb-10">
-          Some of the logos i created
+          Some of the designs i created
         </div>
 
         <PhotoProvider loop>
-          {des.map((d, i) => (
+          {(visiblefirst ? des : des.slice(0, 2)).map((d, i) => (
             <div key={i}>
               <PhotoView
                 key={i}
@@ -87,20 +98,43 @@ function Designfolio() {
                   className="rounded-lg md:rounded-2xl object-cover"
                 />
               </PhotoView>
-              <div className="rounded-lg md:rounded-2xl border-2 border-zinc-500/25 py-1 md:py-3 px-5 my-1 md:my-4 mb-4 md:mb-20">
+              <div className="rounded-lg md:rounded-2xl border-2 border-zinc-500/25 py-1 md:py-3 px-5 my-1 md:my-4 mb-4 md:mb-15">
                 {d}
               </div>
             </div>
           ))}
+
+          <div className="w-full text-center">
+            <button
+              onClick={() => setVisiblefirst(!visiblefirst)}
+              className="inline-block hover:underline text-lg md:text-2xl font-semibold tracking-wider"
+            >
+              {visiblefirst ? "SHOW LESS ←" : "SHOW MORE →"}
+            </button>
+          </div>
         </PhotoProvider>
-        <Carousel name={"Youtube Thumbnails"}>{tn}</Carousel>
-        <Carousel name={"Hestia'25 Brochure"}>{h25}</Carousel>
-        <Carousel name={"Hestia'24 Pre Event Brochure"}>{h24}</Carousel>
-        <Carousel name={"IKIGAI Brochure"}>{iki24}</Carousel>
-        <Carousel name={"FRANKLIN'S LECTURES"}>{frkln}</Carousel>
+        {visiblesecond ? carousels : carousels.slice(0, 2)}
+        <div className="w-full text-center ">
+          <button
+            onClick={() => setVisiblesecond(!visiblesecond)}
+            className="inline-block hover:underline text-lg md:text-2xl font-semibold tracking-wider"
+          >
+            {visiblesecond ? "SHOW LESS ←" : "SHOW MORE →"}
+          </button>
+        </div>
         <MouseSlider images={sp} name={"Sports"} />
         <MouseSlider images={icebae} name={"icebae."} />
-        <MouseSlider images={fr} name={"FR Management Consultancy"} />
+        {visiblethird && (
+          <MouseSlider images={fr} name={"FR Management Consultancy"} />
+        )}
+        <div className="w-full text-center ">
+          <button
+            onClick={() => setVisiblethird(!visiblethird)}
+            className="inline-block hover:underline text-lg md:text-2xl font-semibold tracking-wider"
+          >
+            {visiblethird ? "SHOW LESS ←" : "SHOW MORE →"}
+          </button>
+        </div>
       </div>
     </>
   );

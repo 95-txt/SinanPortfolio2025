@@ -26,15 +26,27 @@ export default function Navbar(props) {
     props.onToggle();
   };
 
+  const handleHome = () => {
+    window.scroll(0, 0);
+  };
+
   return (
     <nav className="sticky top-0 z-50 border-b dark:border-zinc-500/10 border-zinc-100/10  bg-zinc-200/3 dark:bg-zinc-900/20 backdrop-blur-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center items-center h-16">
         {/* Desktop Menu (centered) */}
         <div className="hidden md:flex space-x-8 text-xl">
-          <NavLink to="/">HOME</NavLink>
-          <NavLink to="/about">ABOUT</NavLink>
-          <NavLink to="/projects">PROJECTS</NavLink>
-          <NavLink to="/contact">CONTACT</NavLink>
+          <NavLink to="/" onClick={handleHome}>
+            HOME
+          </NavLink>
+          <NavLink to="/about" onClick={handleHome}>
+            ABOUT
+          </NavLink>
+          <NavLink to="/projects" onClick={handleHome}>
+            PROJECTS
+          </NavLink>
+          <NavLink to="/contact" onClick={handleHome}>
+            CONTACT
+          </NavLink>
         </div>
         <button
           className="hidden md:flex absolute right-6 lg:right-15 text-2xl cursor-pointer"

@@ -33,10 +33,10 @@ function HomeProjects() {
       name: "Mediater",
       images: ["/assets/images/mediater1.jpg"],
     },
-    {
-      name: "Raha Holidays",
-      images: ["/assets/images/raha1.png", "/assets/images/raha2.jpg"],
-    },
+    // {
+    //   name: "Raha Holidays",
+    //   images: ["/assets/images/raha1.png", "/assets/images/raha2.jpg"],
+    // },
   ];
 
   return (
@@ -56,7 +56,7 @@ function HomeProjects() {
 
         <div className="mt-15 pb-20">
           <ul className="border-t-1 border-t-zinc-500/50">
-            {projects.map((project, i) => (
+            {projects.slice(0, 4).map((project, i) => (
               <motion.li
                 className="border-b-1 border-b-zinc-500/50"
                 key={i}
@@ -132,7 +132,7 @@ function HomeProjects() {
           className="text-right content-end mb-30"
         >
           <a
-            href="projects"
+            href="projects/design"
             className="text-xl md:text-2xl tracking-wider font-semibold hover:underline "
           >
             SEE MORE DESIGNS →
