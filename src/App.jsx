@@ -28,18 +28,21 @@ function App() {
         <title>Muhammed Sinan | Portfolio</title>
         <meta
           name="description"
-          content="Computer Science and engineering graduate, MERN Stack developer and Designer. Explore my portfolio website."
+          content="Developer and Designer, Computer Science and engineering graduate. Explore my portfolio website."
         />
         <meta
           name="keywords"
-          content="Muhammed Sinan, portfolio, developer, graphic, designer, Calicut, UI UX, React, snnTorch, full stack, web developer, spiking neural networks, MERN, sinan, TKM, TKMCE"
+          content="Muhammed Sinan, portfolio, developer, graphic, designer, Calicut, UI, UX, React, full stack, web developer, spiking neural networks, MERN, sinan, TKM, TKMCE, sinan, React developer"
         />
+
         <meta name="author" content="Muhammed Sinan" />
         <meta name="robots" content="index, follow" />
+
         <meta property="og:title" content="Muhammed Sinan | Portfolio" />
+        <meta property="og:site_name" content="Sinan Portfolio" />
         <meta
           property="og:description"
-          content="Computer Science and engineering graduate, MERN Stack developer and Designer. Explore my portfolio website."
+          content="Developer and Designer, Computer Science and engineering graduate. Explore my portfolio website."
         />
         <meta
           property="og:url"
@@ -56,8 +59,6 @@ function App() {
           theme ? "" : "dark"
         } bg-zinc-100/0 dark:bg-zinc-900/0 text-zinc-900 dark:text-zinc-100`}
       >
-        <div className="hidden dark:block fixed w-full h-25 bottom-0 bg-gradient-to-t from-zinc-900/95 via-zinc-900/40 to-transparent z-30 pointer-events-none"></div>
-
         <ParticlesBackground theme={theme} />
         <Navbar onToggle={handleTheme} />
         <ScrollToTop />
