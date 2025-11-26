@@ -41,20 +41,27 @@ function HomeDesigns() {
           Designs
         </motion.p>
       </div>
-      <div className="flex justify-between">
+      <div className="flex justify-between gap-6">
         {designs.map((design, i) => (
           <div className="flex flex-col text-zinc-500">
             <div>{design.name}</div>
             <div className="relative">
               {design.images.map((image, j) => (
                 <img
+                  key={j}
                   src={image}
                   alt="image"
-                  className={`w-xs ${
-                    j ? `absolute top-${4 * j} left-${4 * j}` : `relative`
-                  } z-[${
-                    2 - j
-                  }] hover:scale-102 hover:z-[3] transition duration-300  `}
+                  className={`
+      w-xs
+      ${j === 0 ? "relative z-[2]" : "absolute "}
+      ${j === 1 ? "z-[1]" : "z-[0]"}
+      hover:scale-102 hover:z-[3]
+      transition duration-300
+    `}
+                  style={{
+                    top: j === 0 ? undefined : `${j}rem`,
+                    left: j === 0 ? undefined : `${j}rem`,
+                  }}
                 />
               ))}
             </div>
