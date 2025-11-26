@@ -107,17 +107,19 @@ function Designfolio() {
           <div className="w-full text-center">
             <button
               onClick={() => setVisiblefirst(!visiblefirst)}
-              className="inline-block hover:underline text-lg md:text-2xl font-semibold tracking-wider"
+              className="inline-block hover:underline text-lg md:text-2xl font-semibold tracking-wider btn-clr"
             >
               {visiblefirst ? "SHOW LESS ←" : "SHOW MORE →"}
             </button>
           </div>
         </PhotoProvider>
-        {visiblesecond ? carousels : carousels.slice(0, 2)}
+        <div className="flex flex-wrap">
+          {visiblesecond ? carousels : carousels.slice(0, 2)}
+        </div>
         <div className="w-full text-center ">
           <button
             onClick={() => setVisiblesecond(!visiblesecond)}
-            className="inline-block hover:underline text-lg md:text-2xl font-semibold tracking-wider"
+            className="inline-block hover:underline text-lg md:text-2xl font-semibold tracking-wider btn-clr"
           >
             {visiblesecond ? "SHOW LESS ←" : "SHOW MORE →"}
           </button>
@@ -130,7 +132,7 @@ function Designfolio() {
         <div className="w-full text-center ">
           <button
             onClick={() => setVisiblethird(!visiblethird)}
-            className="inline-block hover:underline text-lg md:text-2xl font-semibold tracking-wider"
+            className="inline-block hover:underline text-lg md:text-2xl font-semibold tracking-wider btn-clr"
           >
             {visiblethird ? "SHOW LESS ←" : "SHOW MORE →"}
           </button>

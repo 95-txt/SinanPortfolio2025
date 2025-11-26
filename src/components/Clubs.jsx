@@ -35,7 +35,7 @@ function Clubs({ clubs }) {
           <div className="w-full text-center md:mt-6">
             <button
               onClick={() => setVisibleclubs(!visibleclubs)}
-              className="inline-block hover:underline text-lg md:text-2xl font-semibold tracking-wider"
+              className="inline-block hover:underline text-lg md:text-2xl font-semibold tracking-wider btn-clr"
             >
               {visibleclubs ? "SHOW LESS ←" : "SHOW MORE →"}
             </button>

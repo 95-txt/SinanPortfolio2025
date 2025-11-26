@@ -49,21 +49,18 @@ function About() {
       <Clubs clubs={clubs} />
       <Line />
       {/* ------------------------------------- */}
-      <Freelances freelances={freelances} />
+      <Freelances />
       <Line />
       {/* ------------------------------------- */}
       <Certificates />
       <Line />
 
-      <div className="p-8 md:p-32 lg:px-50 md:text-center">
-        <div className="text-xl md:text-6xl font-bold ">
-          TKM College of Engineering
-        </div>
-        <div className="text-sm md:text-2xl mt-4 mb-2">
-          Kollam, APJ Abdul Kalam Technological University, Kerala
-        </div>
-        <div className="text-sm md:text-2xl mt-2">
-          Bachelor of Technology in Computer Science and Engineering 2021-25
+      <div className="p-8 md:p-32 lg:max-w-7xl mx-auto md:text-left">
+        <div className="text-xl md:text-6xl font-bold ">B Tech CSE</div>
+        <div className="text-sm md:text-xl mt-2 opacity-70">
+          did my Bachelor of Technology in Computer Science and Engineering from
+          TKM College of Engineering, Kollam, APJ Abdul Kalam Technological
+          University, Kerala - 2021-25
         </div>
 
         <PhotoProvider>
@@ -78,7 +75,7 @@ function About() {
                       src={src}
                       alt={`Gallery ${i}`}
                       loading="lazy"
-                      className="rounded-lg md:rounded-2xl hover:scale-102 transition-transform duration-500 "
+                      className="rounded-lg md:rounded-xl hover:scale-105 transition-transform duration-500 "
                     />
                   </PhotoView>
                 ))}
@@ -87,21 +84,22 @@ function About() {
       </div>
       <Line />
       {/* ------------------------------------- */}
-      <div className="p-8 md:p-32 lg:px-50 md:text-center">
-        <div className="text-xl md:text-6xl font-bold ">GHSS Karuvanpoyil</div>
-        <div className="text-sm md:text-2xl mt-4 mb-2">
-          Kozhikode, SCERT Kerala, Biology Science 2018-20
+      <div className="p-8 md:p-32 lg:max-w-7xl mx-auto md:text-left">
+        <div className="text-xl md:text-6xl font-bold ">PLUS 2 BS</div>
+        <div className="text-sm md:text-xl mt-2 opacity-70">
+          did my XII in Biology Science from GHSS Karuvanpoyil, Calicut, SCERT,
+          - 2018-20
         </div>
 
         <PhotoProvider>
-          <div className="mt-10 md:mt-10 columns-2 sm:columns-3 md:columns-4 gap-2 md:gap-4 space-y-2 md:space-y-4">
-            {tkmimages.map((src, i) => (
-              <PhotoView key={i} src={src}>
+          <div className="mt-10 flex gap-2 md:gap-4 space-y-2 md:space-y-4">
+            {Array.from({ length: 4 }).map((_, i) => (
+              <PhotoView key={i} src={`/assets/images/XII/${i + 1}.jpg`}>
                 <img
-                  src={src}
-                  alt={`Gallery ${i}`}
+                  src={`/assets/images/XII/${i + 1}.jpg`}
+                  alt={`Gallery ${i + 1}`}
                   loading="lazy"
-                  className="rounded-lg md:rounded-2xl hover:scale-102 transition-transform duration-500"
+                  className="rounded-lg md:rounded-2xl hover:scale-105 transition-transform duration-500 object-cover w-full h-50"
                 />
               </PhotoView>
             ))}

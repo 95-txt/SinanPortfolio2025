@@ -19,3 +19,34 @@ body {
 button {
   cursor: pointer;
 }
+.btn-clr {
+  /* sky */
+  /* color: oklch(68.5% 0.169 237.323); */
+  /* rose */
+  /* color: oklch(64.5% 0.246 16.439); */
+  /* emerald */
+  /* color: oklch(69.6% 0.17 162.48); */
+  /* purple */
+  color: oklch(53.2% 0.191 306.176);
+  color: oklch(62.7% 0.265 303.9);
+}
+
+@keyframes scrollLoop {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(calc(-50% - 4px));
+  }
+}
+
+.animate-loop-scroll {
+  animation: scrollLoop 40s linear infinite;
+}
+.animate-loop-scroll.r {
+  animation: scrollLoop 40s linear infinite;
+  animation-direction: reverse;
+}
+.animate-loop-scroll:hover {
+  animation-play-state: paused;
+}

@@ -73,7 +73,7 @@ function Artfolio() {
                     copy[i] = !copy[i];
                     setIsOpen(copy);
                   }}
-                  className="inline-block hover:underline text-lg md:text-2xl font-semibold tracking-wider"
+                  className="inline-block hover:underline text-lg md:text-2xl font-semibold tracking-wider btn-clr"
                 >
                   {isOpen[i] ? "SHOW LESS ←" : "SHOW MORE →"}
                 </button>

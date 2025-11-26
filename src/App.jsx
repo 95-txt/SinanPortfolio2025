@@ -44,14 +44,11 @@ function App() {
           property="og:description"
           content="Developer and Designer, Computer Science and engineering graduate. Explore my portfolio website."
         />
-        <meta
-          property="og:url"
-          content="https://sinanportfolio2025.onrender.com/"
-        />
+        <meta property="og:url" content="https://sinanweb.vercel.app/" />
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
-          content="https://sinanportfolio2025.onrender.com/logo.svg"
+          content="https://sinanweb.vercel.app/pic1.JPG"
         />
       </Helmet>
       <div

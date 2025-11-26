@@ -43,7 +43,7 @@ function Devfolio() {
         encryption, and a clean UI for seamless payment management.
       </div>
       <a
-        className="block rounded-lg md:rounded-2xl border-2 border-zinc-300 py-2 md:py-3 px-5 my-3 md:my-4 mb-8 md:mb-10"
+        className="block rounded-lg md:rounded-2xl border-2 border-zinc-300 py-2 md:py-3 px-5 my-3 md:my-4 mb-8 md:mb-10 btn-clr"
         href="https://github.com/95-txt/EasyPay"
         target="_blank"
         rel="noreferrer"
@@ -76,7 +76,7 @@ function Devfolio() {
         and analyze textual data.
       </div>
       <a
-        className="block rounded-lg md:rounded-2xl border-2 border-zinc-300 py-2 md:py-3 px-5 my-3 md:my-4 mb-8 md:mb-10"
+        className="block rounded-lg md:rounded-2xl border-2 border-zinc-300 py-2 md:py-3 px-5 my-3 md:my-4 mb-8 md:mb-10 btn-clr"
         href="https://github.com/95-txt/SNN-BASED-APPROACH-FOR-SOCIAL-MEDIA-THREAT-DETECTION-USING-NLP"
         target="_blank"
         rel="noreferrer"

@@ -4,9 +4,11 @@ import pic1 from "/assets/images/pic1.JPG";
 import CountUp, { useCountUp } from "react-countup";
 import HomeProjects from "../components/HomeProjects";
 import HomeBrands from "../components/HomeBrands";
+import HomeDesigns from "../components/HomeDesigns";
 import Line from "../components/Line";
 import { useNavigate } from "react-router-dom";
 import GridButton from "../components/GridButton";
+import InfiniteTools from "../components/InfiniteTools";
 
 export default function Home() {
   const [start, setStart] = useState(false);
@@ -119,7 +121,7 @@ export default function Home() {
           >
             <a
               href="about"
-              className="inline-block text-xl md:text-2xl mt-10 md:mt-20 tracking-wider font-semibold hover:underline"
+              className="inline-block text-xl md:text-2xl mt-10 md:mt-20 tracking-wider font-semibold hover:underline btn-clr"
             >
               MORE ABOUT ME →
             </a>
@@ -128,17 +130,25 @@ export default function Home() {
         <motion.div
           onViewportEnter={() => setStart(true)}
           viewport={{ once: true }}
-          className="relative z-0"
+          className="relative z-0 h-30 lg:h-100"
         >
           <p className="absolute -left-20 bottom-0 lg:-bottom-30 leading-none text-[72vw] md:text-[40vw] opacity-5">
             {start ? <CountUp end={95} duration={5} /> : 0}
           </p>
         </motion.div>
       </div>
-      <Line />
+      {/* <Line /> */}
       <HomeProjects />
-      <Line />
-      <HomeBrands />
+      {/* <Line /> */}
+      <HomeDesigns />
+      <div className="flex justify-center my-50">
+        <InfiniteTools />
+        <HomeBrands />
+      </div>
+      {/* <Line />
+      <InfiniteTools />
+      <Line /> 
+      <HomeBrands /> */}
     </>
   );
 }

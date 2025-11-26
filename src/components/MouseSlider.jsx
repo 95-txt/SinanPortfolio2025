@@ -58,7 +58,7 @@ export default function MouseSlider({ images, name }) {
   return (
     <div className="relative w-full select-none my-10 lg:my-30">
       <div
-        className="flex gap-1 lg:gap-2 w-full h-60 md:h-100 lg:h-120 content-center my-2 select-none"
+        className="flex gap-1 lg:gap-2 w-full h-60 md:h-80 lg:h-h100 content-center my-2 select-none"
         ref={barRef}
         onMouseMove={handleMouseMove}
         onMouseEnter={handleMouseEnter}

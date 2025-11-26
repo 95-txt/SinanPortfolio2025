@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import {
   SiAdobeaftereffects,
   SiAdobeillustrator,
@@ -54,70 +53,19 @@ function HomeBrands() {
     "/assets/logos/ieeelogo.svg",
   ];
   return (
-    <>
-      <div id="brands" className="px-8 md:px-20 lg:px-50">
-        <motion.div
-          className="text-5xl md:text-[6rem] mb-10"
-          initial={{ opacity: 0, x: -100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.8 }}
-          viewport={{ once: true }}
-        >
-          Brands
-        </motion.div>
-        <div className="dark:bg-zinc-50/95 rounded-2xl mb-30 items-center grid grid-cols-3 xl:grid-cols-5 gap-8 p-8 md:gap-20 xl:gap-x-30 md:p-20">
-          {brands.map((brand, i) => (
-            <motion.div
-              // className="md:px-20 md:py-15"
-              key={i}
-              initial={{ opacity: 0, y: 100 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: i * 0.1 }}
-              viewport={{ once: true }}
-            >
-              <img
-                className="hover:scale-110 duration-300"
-                src={brand}
-                alt=""
-              />
-            </motion.div>
-          ))}
-        </div>
+    <div className="mr-50 ml-25">
+      <div className="text-5xl mb-10">Brands</div>
+      <div className="grid grid-cols-5 gap-2 max-w-2xl">
+        {brands.map((brand, i) => (
+          <div
+            key={i}
+            className="hover:bg-zinc-100 aspect-square duration-300 flex justify-center items-center outline-2 outline-zinc-500/50 rounded-xl p-4 "
+          >
+            <img src={brand} alt={i} className="w-auto" />
+          </div>
+        ))}
       </div>
-
-      <Line />
-
-      <div className="sm:px-8 md:px-50 md:mb-30">
-        <motion.div
-          className="text-5xl md:text-[4rem] mt-15 md:mb-15 pb-5 text-center"
-          initial={{ opacity: 0, y: 100 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: true }}
-        >
-          Tools
-        </motion.div>
-        <div className="grid grid-cols-4 md:grid-cols-5 items-center text-zinc-500 mb-20 px-12 md:px-0">
-          {tools.map((Icon, i) => {
-            return (
-              <motion.div
-                key={i}
-                // className="md:px-20 py-15"
-                className="flex justify-center py-6 md:py-12"
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, ease: "easeOut", delay: i * 0.1 }}
-              >
-                <div className=" hover:scale-110 transition-transform duration-300">
-                  <Icon className="w-12 h-12 md:w-24 md:h-24" />
-                </div>
-              </motion.div>
-            );
-          })}
-        </div>
-      </div>
-    </>
+    </div>
   );
 }
 

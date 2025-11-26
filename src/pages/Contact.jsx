@@ -14,7 +14,7 @@ function Contact() {
       <div className="mx-8 md:text-center">
         <a
           href="mailto:sinanlw95@gmail.com"
-          className="text-blue-500 hover:underline"
+          className="btn-clr hover:underline"
         >
           sinanlw95@gmail.com
         </a>
