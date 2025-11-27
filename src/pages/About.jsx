@@ -5,48 +5,35 @@ import { useState, useEffect } from "react";
 import Clubs from "../components/Clubs";
 import Freelances from "../components/Freelances";
 import Certificates from "../components/Certificates";
+import AboutTkmce from "../components/AboutTkmce";
 
 function About() {
-  const [tkmimages, setTkmimages] = useState([]);
-  const [clubs, setClubs] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [freelances, setFreelances] = useState([]);
+  const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const [imagesRes, clubsRes, freelancesRes] = await Promise.all([
-          fetch("/data/tkmimages.json"),
-          fetch("/data/clubs.json"),
-          fetch("/data/freelance.json"),
-        ]);
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       // const [imagesRes] = await Promise.all([fetch("/data/clubs.json")]);
+  //       // const imagesRes = await fetch("/data/clubs.json");
 
-        const imagesData = await imagesRes.json();
-        const clubsData = await clubsRes.json();
-        const freelancesData = await freelancesRes.json();
+  //       const imagesData = await imagesRes.json();
 
-        setTkmimages(imagesData);
-        setClubs(clubsData);
-        setFreelances(freelancesData);
-      } catch (error) {
-        console.error("Failed to fetch data:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
+  //       setTkmimages(imagesData);
+  //     } catch (error) {
+  //       console.error("Failed to fetch data:", error);
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   };
 
-    fetchData();
-  }, []);
-
-  const ImageSkeleton = () => (
-    <div className="bg-zinc-500/20 animate-pulse rounded-lg aspect-square w-full"></div>
-  );
+  //   fetchData();
+  // }, []);
 
   // if (loading) return <div>loading</div>;
 
   return (
     <>
-      <Clubs clubs={clubs} />
+      <Clubs />
       <Line />
       {/* ------------------------------------- */}
       <Freelances />
@@ -54,8 +41,8 @@ function About() {
       {/* ------------------------------------- */}
       <Certificates />
       <Line />
-
-      <div className="p-8 md:p-32 lg:max-w-7xl mx-auto md:text-left">
+      <AboutTkmce />
+      {/* <div className="p-8 md:p-32 lg:max-w-7xl mx-auto md:text-left">
         <div className="text-xl md:text-6xl font-bold ">B Tech CSE</div>
         <div className="text-sm md:text-xl mt-2 opacity-70">
           did my Bachelor of Technology in Computer Science and Engineering from
@@ -81,7 +68,7 @@ function About() {
                 ))}
           </div>
         </PhotoProvider>
-      </div>
+      </div> */}
       <Line />
       {/* ------------------------------------- */}
       <div className="p-8 md:p-32 lg:max-w-7xl mx-auto md:text-left">
