@@ -36,7 +36,7 @@ function InfiniteTools() {
   ];
 
   return (
-    <div className="ml-50 mr-25">
+    <div className="ml-8 md:ml-50 md:mr-25">
       <div className="text-5xl mb-10">Tools</div>
       <div className="h-100 overflow-hidden">
         <div className="flex overflow-hidden">

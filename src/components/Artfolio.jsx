@@ -49,7 +49,7 @@ function Artfolio() {
       <div className="px-8">
         <div className="text-xl md:text-6xl font-bold ">Artfolio</div>
         <div className="text-sm md:text-xl mt-2 mb-10 opacity-70">
-          Some of the designs i created
+          Some of the arts i created
         </div>
       </div>
       {/* <div className="text-xl md:text-6xl font-bold mt-20">Pencil Potraits</div>
@@ -58,7 +58,7 @@ function Artfolio() {
         {artarrays.map((artarray, i) => (
           <div key={i}>
             <div className="px-8 md:px-18 lg:max-w-7xl mx-auto ">
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4">
                 {isOpen[i] ? artarray : artarray.slice(0, 3)}
               </div>
               <div className="rounded-lg md:rounded-2xl border-2 border-zinc-500/25 py-2 md:py-3 px-5 my-3 md:my-4 mb-8 md:mb-6">
@@ -73,7 +73,7 @@ function Artfolio() {
                     copy[i] = !copy[i];
                     setIsOpen(copy);
                   }}
-                  className="inline-block hover:underline text-lg md:text-2xl font-semibold tracking-wider btn-clr lg:mb-16"
+                  className="inline-block hover:underline text-lg md:text-2xl font-semibold tracking-wider btn-clr mb-10 lg:mb-16"
                 >
                   {isOpen[i] ? "SHOW LESS ←" : "SHOW MORE →"}
                 </button>

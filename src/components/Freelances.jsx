@@ -15,11 +15,11 @@ function Freelances() {
   ];
 
   return (
-    <div className="p-8 md:p-32 lg:px-50 md:text-center">
+    <div className="p-8 md:p-32 lg:px-50 text-center">
       <div className="text-xl md:text-6xl font-bold mb-6 md:mb-12">
         Freelanced for
       </div>
-      <div className="flex gap-12 items-center">
+      <div className="flex gap-4 md:gap-12 items-center">
         <ul className="w-full ">
           {freelances.slice(0, 4).map((freelance, i) => (
             <motion.li

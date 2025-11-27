@@ -56,14 +56,14 @@ export default function MouseSlider({ images, name }) {
   };
 
   return (
-    <div className="relative w-full select-none my-10 lg:my-30">
-      <div
-        className="flex gap-1 lg:gap-2 w-full h-60 md:h-80 lg:h-h100 content-center my-2 select-none"
-        ref={barRef}
-        onMouseMove={handleMouseMove}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      >
+    <div
+      className="relative w-full select-none my-20 lg:my-30"
+      ref={barRef}
+      onMouseMove={handleMouseMove}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      <div className="flex gap-1 lg:gap-2 w-full h-60 md:h-80 lg:h-h100 content-center my-2 select-none">
         <PhotoProvider>
           {images.map((src, i) => (
             <div
@@ -89,17 +89,19 @@ export default function MouseSlider({ images, name }) {
       <div className="rounded-lg md:rounded-2xl border-2 border-zinc-500/25 py-1 md:py-3 px-5 my-1 md:my-4 mb-4 md:mb-20">
         {name}
       </div>
-
       {/* Slider dot */}
+
       <div
-        className={`absolute -bottom-6 w-2 h-2 rounded-full bg-zinc-900 dark:bg-zinc-100 transition-transform ${
+        className={`absolute -bottom-10 p-4 transition-transform ${
           isDragging ? "scale-110" : ""
         }`}
-        style={{ left: `calc(${value}% - 4px)` }}
+        style={{ left: `calc(${value}% - 20px)` }}
         onTouchStart={handleStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleEnd}
-      />
+      >
+        <div className="w-2 h-2 rounded-full bg-zinc-900 dark:bg-zinc-100"></div>
+      </div>
     </div>
   );
 }

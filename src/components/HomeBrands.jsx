@@ -12,7 +12,6 @@ import {
   SiTailwindcss,
 } from "react-icons/si";
 import { FaFigma, FaJava, FaJsSquare, FaNodeJs } from "react-icons/fa";
-import Line from "./Line";
 
 function HomeBrands() {
   const tools = [
@@ -53,9 +52,9 @@ function HomeBrands() {
     "/assets/logos/ieeelogo.svg",
   ];
   return (
-    <div className="mr-50 ml-25">
+    <div className="mx-8 md:mr-50 md:ml-25 mt-20 md:mt-0">
       <div className="text-5xl mb-10">Brands</div>
-      <div className="grid grid-cols-5 gap-2 max-w-2xl">
+      <div className="grid grid-cols-3 md:grid-cols-5 gap-2 md:max-w-2xl mx-auto">
         {brands.map((brand, i) => (
           <div
             key={i}

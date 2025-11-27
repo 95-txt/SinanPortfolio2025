@@ -79,14 +79,14 @@ function About() {
         </div>
 
         <PhotoProvider>
-          <div className="mt-10 flex gap-2 md:gap-4 space-y-2 md:space-y-4">
-            {Array.from({ length: 4 }).map((_, i) => (
-              <PhotoView key={i} src={`/assets/images/XII/${i + 1}.jpg`}>
+          <div className="mt-10 gap-2 md:gap-4 grid grid-flow-row grid-cols-2 md:grid-cols-4">
+            {[0, 1, 2, 3].map((i, j) => (
+              <PhotoView key={j} src={`/assets/images/XII/${i + 1}.jpg`}>
                 <img
                   src={`/assets/images/XII/${i + 1}.jpg`}
                   alt={`Gallery ${i + 1}`}
                   loading="lazy"
-                  className="rounded-lg md:rounded-2xl hover:scale-105 transition-transform duration-500 object-cover w-full h-50"
+                  className="rounded-lg md:rounded-2xl hover:scale-105 transition-transform duration-500 object-cover w-full md:h-50 aspect-square"
                 />
               </PhotoView>
             ))}

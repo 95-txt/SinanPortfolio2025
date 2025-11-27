@@ -34,7 +34,7 @@ function Devfolio() {
       <div className="md:text-center text-xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-18">
         Devfolio
       </div>
-      <div className="text-xl md:text-2xl lg:text-4xl font-bold mb-6 md:mb-6">
+      <div className="text-xl md:text-2xl lg:text-4xl font-bold mb-6 mt-16 md:mt-33">
         EasyPay Payment Wallet<p className="float-right btn-clr">{"</>"}</p>
       </div>
 
@@ -62,7 +62,8 @@ function Devfolio() {
           </div>
         </div>
       </PhotoProvider>
-      <div className="text-xl md:text-3xl lg:text-4xl font-bold my-6 md:my-6 md:mt-40">
+
+      <div className="text-xl md:text-3xl lg:text-4xl font-bold mb-6  mt-20 md:mt-40">
         SNN-Based Approach for Social Media Threat Detection Using NLP
         <p className="float-right btn-clr">{"</>"}</p>
       </div>

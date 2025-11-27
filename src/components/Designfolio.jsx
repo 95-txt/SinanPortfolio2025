@@ -129,7 +129,7 @@ function Designfolio() {
         {visiblethird && (
           <MouseSlider images={fr} name={"FR Management Consultancy"} />
         )}
-        <div className="w-full text-center lg:-mt-6">
+        <div className="w-full text-center mt-20 lg:-mt-6">
           <button
             type="button"
             onClick={() => setVisiblethird(!visiblethird)}

@@ -52,12 +52,12 @@ function HomeProjects() {
           whileInView={{ y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           viewport={{ once: true }}
-          className="text-5xl md:text-[6rem] text-right pt-15 will-change-transform mt-30"
+          className="text-5xl md:text-[6rem] text-right pt-15 will-change-transform md:mt-30"
         >
           Projects
         </motion.p>
 
-        <div className="mt-15 pb-20">
+        <div className="mt-10 md:mt-15 mb-10 md:mb-20">
           <ul className="border-t-1 border-t-zinc-500/50">
             {projects.slice(0, 4).map((project, i) => (
               <motion.li
@@ -69,7 +69,7 @@ function HomeProjects() {
                 viewport={{ once: true }}
               >
                 <div className="p-4 lg:px-10 hover:translate-x-2 hover:bg-zinc-500/10 duration-300">
-                  <p className="text-lg md:text-2xl">{project.name}</p>
+                  <p className="text-base md:text-2xl">{project.name}</p>
                   <p className="text-xs md:text-base text-zinc-500">
                     {project.tools}
                   </p>

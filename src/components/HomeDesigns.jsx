@@ -30,20 +30,20 @@ function HomeDesigns() {
   ];
   return (
     <div className="px-8 md:px-20 lg:px-50">
-      <div className="overflow-hidden mt-40">
+      <div className=" mt-30 md:mt-40">
         <motion.p
-          initial={{ y: 100 }}
-          whileInView={{ y: 0 }}
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           viewport={{ once: true }}
-          className="text-5xl md:text-[6rem] pb-15 will-change-transform"
+          className="text-5xl md:text-[6rem] mb-10 md:mb-15 will-change-transform"
         >
           Designs
         </motion.p>
       </div>
-      <div className="flex justify-between gap-6">
+      <div className="flex flex-wrap justify-between gap-8 md:gap-6">
         {designs.map((design, i) => (
-          <div key={i} className="flex flex-col text-zinc-500">
+          <div key={i} className="flex flex-col text-zinc-500 pr-4 md:pr-0">
             <div>{design.name}</div>
             <div className="relative">
               {design.images.map((image, j) => (
@@ -74,7 +74,7 @@ function HomeDesigns() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.8 }}
         viewport={{ once: true }}
-        className="text-right content-end"
+        className="text-right content-end mt-16 md:mt-0"
       >
         <a
           href="projects/design"

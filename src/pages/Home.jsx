@@ -41,7 +41,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, ease: "easeOut", delay: 0.6 }}
               viewport={{ once: true }}
-              className="inline-block tracking-[4rem] -mr-[4rem] text-2xl md:text-3xl lg:text-4xl w-fit"
+              className="inline-block tracking-[1rem] -mr-[1rem] md:tracking-[4rem] md:-mr-[4rem] text-base md:text-3xl lg:text-4xl w-fit"
             >
               MUHAMMED{" "}
             </motion.div>
@@ -52,7 +52,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }}
               viewport={{ once: true }}
-              className="h-fit inline-block text-[28vw] md:text-[14vw] leading-none"
+              className="h-fit inline-block text-8xl md:text-[14vw] leading-none -ml-1"
             >
               SINAN
             </motion.div>
@@ -92,6 +92,7 @@ export default function Home() {
       </div>
       <Line />
       <FloatNav
+        className="hidden md:block"
         aboutRef={aboutRef}
         projectsRef={projectsRef}
         designsRef={designsRef}
@@ -100,7 +101,7 @@ export default function Home() {
       />
       <div
         ref={aboutRef}
-        className="relative w-full flex flex-row-reverse justify-between lg:items-end"
+        className="relative w-full flex flex-col md:flex-row-reverse justify-between lg:items-end"
       >
         <div className="max-w-7xl flex flex-col space-y-8 px-8 pt-8 md:p-10 lg:px-50 mb-20 md:my-40">
           <motion.img
@@ -146,9 +147,9 @@ export default function Home() {
         <motion.div
           onViewportEnter={() => setStart(true)}
           viewport={{ once: true }}
-          className="relative z-0 h-30 lg:h-100"
+          className="relative z-0 h-20 lg:h-100"
         >
-          <p className="absolute -left-20 bottom-0 lg:-bottom-30 leading-none text-[72vw] md:text-[40vw] opacity-5">
+          <p className="absolute -left-20 bottom-10 lg:-bottom-30 leading-none text-[72vw] md:text-[40vw] opacity-5">
             {start ? <CountUp end={95} duration={5} /> : 0}
           </p>
         </motion.div>
@@ -160,7 +161,7 @@ export default function Home() {
       <div ref={designsRef}></div>
       <HomeDesigns />
       <div ref={toolsRef}>
-        <div className="flex justify-center py-50">
+        <div className="flex flex-wrap md:flex-nowrap md:justify-center my-30 md:my-50">
           <InfiniteTools />
           <HomeBrands />
         </div>
