@@ -8,7 +8,7 @@ function Contact() {
       <div className="m-8 md:mt-30 text-3xl font-bold md:text-center md:text-6xl">
         Hit Me Up.
       </div>
-      <div className="mx-8 md:my-6 text-lg md:text-center md:text-2xl">
+      <div className="mx-8 md:my-6 text-lg md:text-center md:text-2xl opacity-70">
         Feel free to reach out for inquiries, or just to say hello!
       </div>
       <div className="mx-8 md:text-center">
@@ -22,7 +22,7 @@ function Contact() {
       <form
         action="https://formspree.io/f/mldoovqa"
         method="POST"
-        className="m-8 flex flex-col gap-4 md:w-1/2 md:mx-auto"
+        className="m-8 flex flex-col gap-4 md:max-w-4xl md:mx-auto"
       >
         <input
           type="email"

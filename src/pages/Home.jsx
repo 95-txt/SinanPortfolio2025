@@ -1,7 +1,7 @@
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { useRef, useState } from "react";
 import pic1 from "/assets/images/pic1.JPG";
-import CountUp, { useCountUp } from "react-countup";
+import CountUp from "react-countup";
 import HomeProjects from "../components/HomeProjects";
 import HomeBrands from "../components/HomeBrands";
 import HomeDesigns from "../components/HomeDesigns";
@@ -9,10 +9,17 @@ import Line from "../components/Line";
 import { useNavigate } from "react-router-dom";
 import GridButton from "../components/GridButton";
 import InfiniteTools from "../components/InfiniteTools";
+import ShinyText from "../components/ShinyText";
+import FloatNav from "../components/FloatNav";
 
 export default function Home() {
   const [start, setStart] = useState(false);
   const navigate = useNavigate();
+  const aboutRef = useRef(null);
+  const projectsRef = useRef(null);
+  const designsRef = useRef(null);
+  const toolsRef = useRef(null);
+  const connectRef = useRef(null);
 
   return (
     <>
@@ -34,7 +41,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, ease: "easeOut", delay: 0.6 }}
               viewport={{ once: true }}
-              className="sm:inline tracking-widest text-3xl md:text-5xl lg:text-8xl"
+              className="inline-block tracking-[4rem] -mr-[4rem] text-2xl md:text-3xl lg:text-4xl w-fit"
             >
               MUHAMMED{" "}
             </motion.div>
@@ -53,11 +60,13 @@ export default function Home() {
           <motion.div
             initial={{ clipPath: "inset(0 100% 0 0)" }}
             animate={{ clipPath: "inset(0 0 0 0)" }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 1 }}
+            transition={{ duration: 1, ease: "easeInOut", delay: 1.5 }}
             viewport={{ once: true }}
-            className="text-sm md:text-2xl italic text-zinc-500"
+            className="text-sm md:text-2xl italic text-zinc-500 inline mx-auto"
           >
-            Developer &amp; Designer
+            <ShinyText speedInMs={6000} className="w-fit">
+              Designer &amp; Developer
+            </ShinyText>
           </motion.div>
           <div className="w-full grid grid-cols-2 md:grid-cols-4 my-10 border-y-2 border-zinc-500">
             <GridButton
@@ -82,9 +91,17 @@ export default function Home() {
         </div>
       </div>
       <Line />
-
-      <div className="w-full flex flex-row-reverse justify-between lg:items-end">
-        {/* Right Column - 3 Rows */}
+      <FloatNav
+        aboutRef={aboutRef}
+        projectsRef={projectsRef}
+        designsRef={designsRef}
+        toolsRef={toolsRef}
+        connectRef={connectRef}
+      />
+      <div
+        ref={aboutRef}
+        className="relative w-full flex flex-row-reverse justify-between lg:items-end"
+      >
         <div className="max-w-7xl flex flex-col space-y-8 px-8 pt-8 md:p-10 lg:px-50 mb-20 md:my-40">
           <motion.img
             initial={{ clipPath: "inset(0% 0% 0% 100%)" }}
@@ -96,7 +113,6 @@ export default function Home() {
             className="w-full max-h-20 md:max-h-48 object-cover overflow-hidden"
           />
 
-          {/* Row 2 - Text */}
           <motion.p
             initial={{ clipPath: "inset( 0 100% 0 0 )" }}
             whileInView={{ clipPath: "inset( 0 0 0 0 )" }}
@@ -138,13 +154,18 @@ export default function Home() {
         </motion.div>
       </div>
       {/* <Line /> */}
+      <div ref={projectsRef}></div>
       <HomeProjects />
       {/* <Line /> */}
+      <div ref={designsRef}></div>
       <HomeDesigns />
-      <div className="flex justify-center my-50">
-        <InfiniteTools />
-        <HomeBrands />
+      <div ref={toolsRef}>
+        <div className="flex justify-center py-50">
+          <InfiniteTools />
+          <HomeBrands />
+        </div>
       </div>
+      <div ref={connectRef}></div>
       {/* <Line />
       <InfiniteTools />
       <Line /> 

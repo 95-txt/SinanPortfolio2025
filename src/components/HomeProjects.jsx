@@ -19,7 +19,7 @@ function HomeProjects() {
           whileInView={{ y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           viewport={{ once: true }}
-          className="text-5xl md:text-[6rem] text-right pt-15 will-change-transform"
+          className="text-5xl md:text-[6rem] text-right pt-15 will-change-transform mt-30"
         >
           Projects
         </motion.p>
@@ -51,11 +51,11 @@ function HomeProjects() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.8 }}
           viewport={{ once: true }}
-          className="text-right content-end mb-30"
+          className="text-right content-end"
         >
           <a
-            href="projects"
-            className="text-xl md:text-2xl tracking-wider font-semibold hover:underline btn-clr"
+            href="/projects/dev"
+            className="text-xl md:text-2xl tracking-wider font-semibold hover:underline btn-clr -mb-10"
           >
             SEE MORE PROJECTS →
           </a>

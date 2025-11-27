@@ -35,9 +35,9 @@ function Logofolio() {
     }
   }
   return (
-    <div className="p-8 md:p-18 lg:px-50 md:text-center">
+    <div className="p-8 md:p-18 lg:max-w-7xl mx-auto md:text-center">
       <div className="text-xl md:text-6xl font-bold ">Logo Folio</div>
-      <div className="text-sm md:text-xl mt-2 mb-10">
+      <div className="text-sm md:text-xl mt-2 mb-10 opacity-70">
         Some of the logos i created
       </div>
       {logoarrays.map((logoarray, i) => (

@@ -16,11 +16,11 @@ function HomeDesigns() {
       ],
     },
     {
-      name: "Roohi Henna",
+      name: "icebae.",
       images: ["/assets/images/ice1.jpg", "/assets/images/ice2.jpg"],
     },
     {
-      name: "Roohi Henna",
+      name: "Aurora Fest",
       images: [
         "/assets/images/logofolio/aurora3.jpg",
         "/assets/images/logofolio/aurora2.jpg",
@@ -30,7 +30,7 @@ function HomeDesigns() {
   ];
   return (
     <div className="px-8 md:px-20 lg:px-50">
-      <div className="overflow-hidden ">
+      <div className="overflow-hidden mt-40">
         <motion.p
           initial={{ y: 100 }}
           whileInView={{ y: 0 }}
@@ -43,7 +43,7 @@ function HomeDesigns() {
       </div>
       <div className="flex justify-between gap-6">
         {designs.map((design, i) => (
-          <div className="flex flex-col text-zinc-500">
+          <div key={i} className="flex flex-col text-zinc-500">
             <div>{design.name}</div>
             <div className="relative">
               {design.images.map((image, j) => (
@@ -74,7 +74,7 @@ function HomeDesigns() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.8 }}
         viewport={{ once: true }}
-        className="text-right content-end mb-30"
+        className="text-right content-end"
       >
         <a
           href="projects/design"

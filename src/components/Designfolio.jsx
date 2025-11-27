@@ -35,35 +35,35 @@ function Designfolio() {
   for (let i = 1; i <= 18; i++) {
     tn.push(
       <PhotoView key={i} src={`/assets/images/thumbnails/tn${i}.jpg`}>
-        <img src={`/assets/images/thumbnails/tn${i}.jpg`} />
+        <img alt={i} src={`/assets/images/thumbnails/tn${i}.jpg`} />
       </PhotoView>
     );
   }
   for (let i = 1; i <= 6; i++) {
     frkln.push(
       <PhotoView key={i} src={`/assets/images/frklnbrsr/br${i}.jpg`}>
-        <img src={`/assets/images/frklnbrsr/br${i}.jpg`} />
+        <img alt={i} src={`/assets/images/frklnbrsr/br${i}.jpg`} />
       </PhotoView>
     );
   }
   for (let i = 1; i <= 26; i++) {
     h25.push(
       <PhotoView key={i} src={`/assets/images/h25brsr/${i}.jpg`}>
-        <img src={`/assets/images/h25brsr/${i}.jpg`} />
+        <img alt={i} src={`/assets/images/h25brsr/${i}.jpg`} />
       </PhotoView>
     );
   }
   for (let i = 1; i <= 11; i++) {
     h24.push(
       <PhotoView key={i} src={`/assets/images/h24brsr/${i}.jpg`}>
-        <img src={`/assets/images/h24brsr/${i}.jpg`} />
+        <img alt={i} src={`/assets/images/h24brsr/${i}.jpg`} />
       </PhotoView>
     );
   }
   for (let i = 1; i <= 5; i++) {
     iki24.push(
       <PhotoView key={i} src={`/assets/images/ikibrsr/iki${i}.jpg`}>
-        <img src={`/assets/images/ikibrsr/iki${i}.jpg`} />
+        <img alt={i} src={`/assets/images/ikibrsr/iki${i}.jpg`} />
       </PhotoView>
     );
   }
@@ -78,9 +78,9 @@ function Designfolio() {
   }
   return (
     <>
-      <div className="p-8 md:p-18 lg:px-50 md:text-center">
+      <div className="p-8 md:p-18 lg:max-w-7xl mx-auto md:text-center">
         <div className="text-xl md:text-6xl font-bold ">Design Folio</div>
-        <div className="text-sm md:text-xl mt-2 mb-10">
+        <div className="text-sm md:text-xl mt-2 mb-10 opacity-70">
           Some of the designs i created
         </div>
 
@@ -113,7 +113,7 @@ function Designfolio() {
             </button>
           </div>
         </PhotoProvider>
-        <div className="flex flex-wrap">
+        <div className="flex flex-wrap justify-between">
           {visiblesecond ? carousels : carousels.slice(0, 2)}
         </div>
         <div className="w-full text-center ">
@@ -129,8 +129,9 @@ function Designfolio() {
         {visiblethird && (
           <MouseSlider images={fr} name={"FR Management Consultancy"} />
         )}
-        <div className="w-full text-center ">
+        <div className="w-full text-center lg:-mt-6">
           <button
+            type="button"
             onClick={() => setVisiblethird(!visiblethird)}
             className="inline-block hover:underline text-lg md:text-2xl font-semibold tracking-wider btn-clr"
           >

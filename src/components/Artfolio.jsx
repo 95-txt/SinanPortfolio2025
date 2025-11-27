@@ -48,7 +48,7 @@ function Artfolio() {
     <div className=" md:text-center py-8 md:py-18">
       <div className="px-8">
         <div className="text-xl md:text-6xl font-bold ">Artfolio</div>
-        <div className="text-sm md:text-xl mt-2 mb-10">
+        <div className="text-sm md:text-xl mt-2 mb-10 opacity-70">
           Some of the designs i created
         </div>
       </div>
@@ -57,7 +57,7 @@ function Artfolio() {
       <PhotoProvider>
         {artarrays.map((artarray, i) => (
           <div key={i}>
-            <div className="px-8 md:px-18 lg:px-50 ">
+            <div className="px-8 md:px-18 lg:max-w-7xl mx-auto ">
               <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
                 {isOpen[i] ? artarray : artarray.slice(0, 3)}
               </div>
@@ -73,13 +73,13 @@ function Artfolio() {
                     copy[i] = !copy[i];
                     setIsOpen(copy);
                   }}
-                  className="inline-block hover:underline text-lg md:text-2xl font-semibold tracking-wider btn-clr"
+                  className="inline-block hover:underline text-lg md:text-2xl font-semibold tracking-wider btn-clr lg:mb-16"
                 >
                   {isOpen[i] ? "SHOW LESS ←" : "SHOW MORE →"}
                 </button>
               </div>
             )}
-            <Line />
+            {/* <Line /> */}
           </div>
         ))}
       </PhotoProvider>

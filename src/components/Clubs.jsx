@@ -9,7 +9,7 @@ function Clubs({ clubs }) {
       <div className="m-8 text-xl md:text-6xl font-bold md:text-center md:mt-20">
         Been a part of
       </div>
-      <div className="md:mt-20 pb-15 px-8 md:px-50">
+      <div className="md:mt-20 pb-15 px-8 md:max-w-7xl mx-auto">
         <ul className="w-full border-t-1 border-t-zinc-500/50">
           {(visibleclubs ? clubs : clubs.slice(0, 4)).map((club, i) => (
             <motion.li

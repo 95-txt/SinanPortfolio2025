@@ -30,12 +30,15 @@ function Devfolio() {
   }
 
   return (
-    <div className="p-8 md:p-18 lg:px-50 md:text-center">
-      <div className="text-xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-18">
-        EasyPay Payment Wallet
+    <div className="p-8 md:p-18 lg:max-w-5xl mx-auto ">
+      <div className="md:text-center text-xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-18">
+        Devfolio
+      </div>
+      <div className="text-xl md:text-2xl lg:text-4xl font-bold mb-6 md:mb-6">
+        EasyPay Payment Wallet<p className="float-right btn-clr">{"</>"}</p>
       </div>
 
-      <div className="text-sm md:text-xl mt-2 mb-10 text-justify">
+      <div className="text-sm md:text-base opacity-70 mt-2 mb-4 text-justify">
         Easypay is a full-stack digital wallet application built with React and
         Node.js (MERN stack). It allows users to securely create accounts,
         manage wallet balances, transfer or request funds, and view transaction
@@ -43,7 +46,7 @@ function Devfolio() {
         encryption, and a clean UI for seamless payment management.
       </div>
       <a
-        className="block rounded-lg md:rounded-2xl border-2 border-zinc-300 py-2 md:py-3 px-5 my-3 md:my-4 mb-8 md:mb-10 btn-clr"
+        className="block rounded-lg md:rounded-2xl border-2 border-zinc-300 py-2 md:py-3 px-5 my-3 md:my-4 mb-8 md:mb-4 btn-clr"
         href="https://github.com/95-txt/EasyPay"
         target="_blank"
         rel="noreferrer"
@@ -57,16 +60,14 @@ function Devfolio() {
           <div className="col-start-2 md:col-start-3 row-start-2">
             {easypay[1]}
           </div>
-          {/* <div className="hidden md:block md:row-start-3">{easypay[0]}</div>
-          <div className="hidden md:block md:row-start-3">{easypay[3]}</div>
-          <div className="hidden md:block md:row-start-3">{easypay[5]}</div> */}
         </div>
       </PhotoProvider>
-      <div className="text-xl md:text-5xl lg:text-6xl font-bold my-6 md:my-20 md:mt-40">
+      <div className="text-xl md:text-3xl lg:text-4xl font-bold my-6 md:my-6 md:mt-40">
         SNN-Based Approach for Social Media Threat Detection Using NLP
+        <p className="float-right btn-clr">{"</>"}</p>
       </div>
 
-      <div className="text-sm md:text-xl mt-2 mb-10 text-justify">
+      <div className="text-sm md:text-base opacity-70 mt-2 mb-4 text-justify">
         SNN-Based Approach for Social Media Threat Detection Using NLP is a
         research project that explores the use of Spiking Neural Networks (SNNs)
         and Natural Language Processing (NLP) techniques to identify and
@@ -76,7 +77,7 @@ function Devfolio() {
         and analyze textual data.
       </div>
       <a
-        className="block rounded-lg md:rounded-2xl border-2 border-zinc-300 py-2 md:py-3 px-5 my-3 md:my-4 mb-8 md:mb-10 btn-clr"
+        className="block rounded-lg md:rounded-2xl border-2 border-zinc-300 py-2 md:py-3 px-5 my-3 md:my-4 mb-8 md:mb-4 btn-clr"
         href="https://github.com/95-txt/SNN-BASED-APPROACH-FOR-SOCIAL-MEDIA-THREAT-DETECTION-USING-NLP"
         target="_blank"
         rel="noreferrer"
