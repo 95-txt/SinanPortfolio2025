@@ -9,41 +9,27 @@ function Artfolio() {
   const artarrays = [potraits, carvs, arts];
   const artnames = ["Pencil Potraits", "Pencil Carvings", "Arts"];
   const [isOpen, setIsOpen] = useState([false, false, false]);
+  const array = [9, 9, 3];
+  const path = ["pencil", "carv", "art"];
 
-  for (let i = 1; i < 10; i++) {
-    carvs.push(
-      <PhotoView key={i} src={"/assets/images/artfolio/carv" + i + ".jpg"}>
-        <img
-          src={"/assets/images/artfolio/carv" + i + ".jpg"}
-          alt="w"
-          loading="lazy"
-          className="rounded-lg md:rounded-2xl object-cover aspect-square"
-        />
-      </PhotoView>
-    );
-    potraits.push(
-      <PhotoView key={i} src={"/assets/images/artfolio/pencil" + i + ".jpg"}>
-        <img
-          src={"/assets/images/artfolio/pencil" + i + ".jpg"}
-          alt="w"
-          loading="lazy"
-          className="rounded-lg md:rounded-2xl object-cover aspect-square"
-        />
-      </PhotoView>
-    );
+  for (let j = 0; j < 3; j++) {
+    for (let i = 0; i < array[j]; i++) {
+      artarrays[j].push(
+        <PhotoView
+          key={i}
+          src={"/assets/images/artfolio/" + path[j] + (i + 1) + ".jpg"}
+        >
+          <img
+            src={"/assets/images/artfolio/" + path[j] + (i + 1) + ".jpg"}
+            alt={artnames[j] + " " + (i + 1)}
+            loading="lazy"
+            className="rounded-lg md:rounded-2xl object-cover aspect-square hover:ring-[.6rem] hover:scale-100 ring-zinc-500/50  duration-300"
+          />
+        </PhotoView>
+      );
+    }
   }
-  for (let i = 1; i < 4; i++) {
-    arts.push(
-      <PhotoView key={i} src={"/assets/images/artfolio/art" + i + ".jpg"}>
-        <img
-          src={"/assets/images/artfolio/art" + i + ".jpg"}
-          alt="w"
-          loading="lazy"
-          className="rounded-lg md:rounded-2xl object-cover aspect-square"
-        />
-      </PhotoView>
-    );
-  }
+
   return (
     <div className=" md:text-center py-8 md:py-18">
       <div className="px-8">

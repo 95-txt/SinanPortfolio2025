@@ -52,9 +52,9 @@ function HomeBrands() {
     "/assets/logos/ieeelogo.svg",
   ];
   return (
-    <div className="mx-8 md:mr-50 md:ml-25 mt-20 md:mt-0">
+    <div className="mx-8 md:mr-20 lg:mr-50 md:ml-10 lg:ml-25 mt-20 md:mt-0">
       <div className="text-5xl mb-10">Brands</div>
-      <div className="grid grid-cols-3 md:grid-cols-5 gap-2 md:max-w-2xl mx-auto">
+      <div className="grid grid-cols-3 lg:grid-cols-5 gap-2 md:max-w-2xl mx-auto">
         {brands.map((brand, i) => (
           <div
             key={i}

@@ -113,7 +113,7 @@ function Designfolio() {
             </button>
           </div>
         </PhotoProvider>
-        <div className="flex flex-wrap justify-between">
+        <div className="flex flex-wrap justify-between gap-10">
           {visiblesecond ? carousels : carousels.slice(0, 2)}
         </div>
         <div className="w-full text-center ">

@@ -8,7 +8,7 @@ import Navbar from "./components/Navbar";
 import ScrollToTop from "./components/ScrollToTop";
 import Footer from "./components/Footer";
 import { useState } from "react";
-import ParticlesBackground from "./components/ParticlesBackground";
+// import ParticlesBackground from "./components/ParticlesBackground";
 import Devfolio from "./components/Devfolio";
 import Designfolio from "./components/Designfolio";
 import Logofolio from "./components/Logofolio";
@@ -54,9 +54,9 @@ function App() {
       <div
         className={` ${
           theme ? "" : "dark"
-        } bg-zinc-100/0 dark:bg-zinc-900/0 text-zinc-900 dark:text-zinc-100`}
+        } bg-zinc-100 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100`}
       >
-        <ParticlesBackground theme={theme} />
+        {/* <ParticlesBackground theme={theme} /> */}
         <Navbar onToggle={handleTheme} />
         <ScrollToTop />
         <Routes>

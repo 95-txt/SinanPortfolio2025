@@ -36,9 +36,9 @@ function InfiniteTools() {
   ];
 
   return (
-    <div className="ml-8 md:ml-50 md:mr-25">
+    <div className="ml-8 md:ml-20 lg:ml-50 md:mr-18 lg:mr-25">
       <div className="text-5xl mb-10">Tools</div>
-      <div className="h-100 overflow-hidden">
+      <div className="h-100 md:h-200 lg:h-100 overflow-hidden">
         <div className="flex overflow-hidden">
           <div className="flex flex-col gap-2 animate-loop-scroll">
             {[...logos, ...logos].map((ToolIcon, i) => (
